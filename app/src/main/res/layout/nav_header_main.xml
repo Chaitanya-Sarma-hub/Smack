@@ -7,6 +7,7 @@
     android:layout_height="@dimen/nav_header_height"
     android:background="@color/colorPrimary"
     android:gravity="bottom"
+    android:onClick="loginButtonNavClicked"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -15,41 +16,54 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/userImageNavHeader"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/profiledefault" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/userNameNavHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="Chaitanya Sharma"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintStart_toEndOf="@+id/userImageNavHeader"
+        app:layout_constraintTop_toTopOf="@+id/userImageNavHeader" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/userEmailNavHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="chaitanyasharma.pe@gmail.com"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toEndOf="@+id/userImageNavHeader"
+        app:layout_constraintTop_toBottomOf="@+id/userNameNavHeader" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginButtonNavHeader"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
         android:text="login"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userImageNavHeader" />
+
+    <ImageView
+        android:id="@+id/addChannelButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:onClick="addChannelClicked"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:srcCompat="@drawable/addchannelbutton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
